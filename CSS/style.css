@@ -82,7 +82,7 @@ margin-bottom: 50px;
 
 
 .cards{
-    margin-top: 50 px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
     
@@ -97,7 +97,7 @@ margin-bottom: 50px;
     height: 250px;
     width: 300px;
     padding :20px 20px 20px 20px ;
-    margin:50px;
+    margin:30px;
     color :white;
    background-color: #050816; 
 }
@@ -115,8 +115,8 @@ margin-bottom: 50px;
 
 }
 .boximage{
-    height: 120px;
-    width: 120px;
+    height: 150px;
+    
     
     color :white;
 margin-top: 10px;
@@ -133,11 +133,15 @@ margin-bottom: 20px;
 text-transform: capitalize;
 }
 .foo{
-    margin-top: 60px;
-    height:80px;
-color :white;
+    text-align:left;
+    padding:20px;
+    height:auto;
     background:#0d163c;
+    color:white;
+}
 
+.foo p{
+     text-align:center;
 }
 .heroabout{
     display:flex;
@@ -181,7 +185,7 @@ font-size: 3 rem;}
     align-items: center;
     gap: 15px;}
 .abcont p{ color: grey;
-    font-size : 1 rem;
+    font-size : 1rem;
     text-transform: capitalize;
 }
 .abtbox i{
@@ -367,149 +371,78 @@ margin-top: 10px;}
     text-transform: none;
 }
 
-/* 
-   TABLET VIEW
- */
+@media (max-width: 768px){
 
-@media screen and (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box{
+        width: 90%;
+        max-width: 300px;
+        margin: 15px;
+    }
 
     .heroabout{
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .about-msg,
+    .about-msg{
+        width: 90%;
+    }
+
     .abtimage{
-        width:90%;
+        width: 90%;
+        height: 250px;
     }
 
     .pane{
-        width:90%;
-        margin:20px auto;
+        width: 90%;
+        margin: 20px auto;
+        flex-wrap: wrap;
+        height: auto;
     }
 
     .journey{
-        width:90%;
-        margin:20px auto;
-        height:auto;
+        width: 95%;
+        margin: 20px auto;
         flex-wrap: wrap;
-        gap:20px;
+        height: auto;
     }
 
     .service{
         flex-wrap: wrap;
-        height:auto;
-        padding-bottom:40px;
-    }
-
-    .srbox{
-        margin-top:30px;
+        height: auto;
     }
 
     .contact{
         flex-direction: column;
-        align-items:center;
+        align-items: center;
     }
 
     .contact-form,
     .location{
-        width:90%;
+        width: 90%;
+    }
+
+    .location iframe{
+        width: 100%;
     }
 
     .con{
         flex-direction: column;
-        gap:30px;
-        margin-top:30px;
+        gap: 20px;
     }
 
     .cont{
-        width:90%;
-        justify-content:center;
-    }
-}
-
-
-/* =========================
-   BASE STYLES (Desktop)
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Poppins, sans-serif;
-    background: #050816;
-    color: white;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =========================
-   TABLET (≤ 768px)
-========================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 30px;
-        text-align: center;
-    }
-}
-
-/* =========================
-   MOBILE (≤ 480px)
-========================= */
-
-@media (max-width: 480px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .navbar {
-        padding: 10px;
-    }
-
-    .hero {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 14px;
+        width: 90%;
     }
 }
